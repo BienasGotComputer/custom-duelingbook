@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Custom DB
 // @description  Adds options to customize DB and make it more streamer friendly
-// @version      1.1.70
+// @version      1.1.71
 // @author       Killburne
 // @license		 MIT
 // @namespace    https://www.yugioh-api.com/
@@ -2633,7 +2633,7 @@ $(document).ready(function() {
             const style = document.createElement('style');
             style.id = customArtworkFullArtCssId;
             style.innerText = `
-            .cardfront.full-art .cardfront_content .pic { left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; z-index: 99999 !important; }
+            .cardfront.full-art .cardfront_content .pic { left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; z-index: 99999 !important; max-height: 100% }
             `;
             document.body.appendChild(style);
         }
