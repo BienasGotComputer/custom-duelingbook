@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Custom DuelingBook",
+  "description": "Adds options to customize DuelingBook and make it more streamer friendly",
+  "version": "2.0.0",
+  "author": "Killburne (original), BienasGotComputer (Chrome extension port)",
+  "permissions": [],
+  "host_permissions": [
+    "*://*.duelingbook.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.duelingbook.com/*"],
+      "js": ["content.js"],
+      "world": "MAIN",
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["bad-words.txt"],
+      "matches": ["*://*.duelingbook.com/*"]
+    }
+  ]
+}
